@@ -1,3 +1,4 @@
+
 public class Complex {
    private double m_a;
    private double m_b;
@@ -33,17 +34,32 @@ public class Complex {
         return toString(getRealPart() - a, getImaginaryPart() - b);
     }
     String multiply(double a, double b){
-        double real = (getRealPart() * a) + (getImaginaryPart() * a);
-        return toString(getRealPart() + a, getImaginaryPart() + b);
+        //double real = (getRealPart() * a) + (getImaginaryPart() * a);
+        
+        double A = a;
+        double B = b;
+        double C = getRealPart();
+        double D = getImaginaryPart();
+        double E = (A * C) - (B * D);
+        double F = (B * C) + (A * D);
+        return toString(E, F);
     }
-    /*
-    double divide(double a, double b){
-        double divide;
-        return divide;
+    String divide(double a, double b){  
+        double A = getRealPart();
+        double B = getImaginaryPart();
+        double C = a;
+        double D = b;
+        double G = Math.pow(C, 2) + Math.pow(D, 2);
+        double E = ((A * C) + (B * D)) / G;
+        double F = ((B * C) - (A * D)) /G;
+       
+       // System.out.println(E);
+        System.out.println(A + " " + B + " " + C + " " + D + " "+G);
+       // System.out.println(G);
+        return toString(E, F);
     }
     double abs(double a, double b){
-        double abs;
-        return abs;
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
     }
-    */
+    
 }
