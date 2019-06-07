@@ -1,10 +1,10 @@
 public class Banking {
-    //private int m_numberOfBanks;
-    private int m_bankNumber;
-    private float m_bankBalance;
-    private int m_numberOfBanksLoaned;
-    private int[] m_bankId;
-    private double[] m_amountLoaned;
+   //private int m_numberOfBanks;
+   int m_bankNumber;
+   float m_bankBalance;
+   int m_numberOfBanksLoaned;
+   int[] m_bankId;
+   double[] m_amountLoaned;
 
    /* Banking() {
         m_numberOfBanks = 0;
@@ -24,19 +24,5 @@ public class Banking {
         m_bankId = bankId;
         m_amountLoaned = amountLoaned;
     }
-    void getUnsafeBanks(Banking[] banks, int numberOfBanks, int minimumAssetLimit){
-        System.out.printf("Unsafe Banks are banks:");
-        
-        for(int i = 0; i < numberOfBanks; i++){
-            float totalAssets = banks[i].m_bankBalance;
-
-            for(int j = 0; j < banks[i].m_numberOfBanksLoaned; j++){
-                totalAssets += banks[i].m_amountLoaned[j];
-            }
-            if(totalAssets < minimumAssetLimit) {
-            System.out.printf(" " + banks[i].m_bankNumber);
-            }
-        }
-        System.out.println();
-    }
+   
 }
